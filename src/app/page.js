@@ -33,8 +33,8 @@ export default function Home() {
           transition={{ ease: "easeOut" }}
         >
           <Image 
-            src="/book5.png" 
-            alt="book1" 
+            src="/book5.png"
+            alt="book5" 
             width={320} 
             height={500} 
             className="w-full h-auto drop-shadow-xl" 
