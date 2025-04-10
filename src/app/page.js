@@ -9,7 +9,7 @@ export default function Home() {
   const { scrollY } = useScroll();
 
   // Adjusted parallax ranges for smoother effect and better control
-  const y1 = useTransform(scrollY, [0, 3000], [0, -400]);
+  const y1 = useTransform(scrollY, [0, 3000], [0, -1000]);
   const y2 = useTransform(scrollY, [0, 3000], [0, -600]);
   const y3 = useTransform(scrollY, [0, 3000], [0, -1000]);
   const y4 = useTransform(scrollY, [0, 9000], [0, -5000]);
@@ -29,7 +29,7 @@ export default function Home() {
       <div className="fixed inset-0 z-0 pointer-events-none">
         <motion.div 
           style={{ y: y1,  }} 
-          className="absolute top-70 left-10 w-80 opacity-20"
+          className="absolute top-150 left-10 w-80 opacity-30"
           transition={{ ease: "easeOut" }}
         >
           <Image 
@@ -42,7 +42,7 @@ export default function Home() {
         </motion.div>
         <motion.div 
           
-          className="absolute top-50 right-20 w-72 opacity-25"
+          className="absolute top-90 right-20 w-72 opacity-25"
           transition={{ ease: "easeOut" }}
         >
           <Image 
@@ -84,14 +84,14 @@ export default function Home() {
 
       {/* Foreground Content */}
       <div className="relative z-10 pt-32 px-4 sm:px-8">
-        <section className="min-h-screen flex flex-col items-center justify-center text-center">
+        <section className="min-h-screen flex flex-col items-center  justify-center text-center">
           <motion.h1
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
             className="text-6xl sm:text-7xl font-bold bg-gradient-to-r from-purple-200 to-violet-200 bg-clip-text text-transparent"
           >
-            Welcome to BookVerse 📚
+            Welcome to BookVerse 
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 40 }}
