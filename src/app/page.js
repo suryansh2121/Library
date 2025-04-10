@@ -11,13 +11,13 @@ export default function Home() {
   // Adjusted parallax ranges for smoother effect and better control
   const y1 = useTransform(scrollY, [0, 3000], [0, -400]);
   const y2 = useTransform(scrollY, [0, 3000], [0, -600]);
-  const y3 = useTransform(scrollY, [0, 3000], [0, -800]);
-  const y4 = useTransform(scrollY, [0, 3000], [0, -1000]);
-  const y5 = useTransform(scrollY, [0, 3000], [0, -1200]);
+  const y3 = useTransform(scrollY, [0, 3000], [0, -1000]);
+  const y4 = useTransform(scrollY, [0, 9000], [0, -5000]);
+  const y5 = useTransform(scrollY, [0, 9000], [0, -7000]);
 
   // Add subtle rotation for more dynamic movement
-  const rotate1 = useTransform(scrollY, [0, 3000], [0, 5]);
-  const rotate2 = useTransform(scrollY, [0, 3000], [0, -5]);
+  const rotate1 = useTransform(scrollY, [0, 3000], [0, 50]);
+  const rotate2 = useTransform(scrollY, [0, 3000], [0, -50]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -28,12 +28,12 @@ export default function Home() {
       {/* Parallax Layers */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <motion.div 
-          style={{ y: y1, rotate: rotate1 }} 
-          className="absolute top-10 left-10 w-80 opacity-20"
+          style={{ y: y1,  }} 
+          className="absolute top-70 left-10 w-80 opacity-20"
           transition={{ ease: "easeOut" }}
         >
           <Image 
-            src="/book1.png" 
+            src="/book5.png" 
             alt="book1" 
             width={320} 
             height={500} 
@@ -41,8 +41,8 @@ export default function Home() {
           />
         </motion.div>
         <motion.div 
-          style={{ y: y2, rotate: rotate2 }} 
-          className="absolute top-20 right-20 w-72 opacity-25"
+          
+          className="absolute top-50 right-20 w-72 opacity-25"
           transition={{ ease: "easeOut" }}
         >
           <Image 
@@ -55,7 +55,7 @@ export default function Home() {
         </motion.div>
         <motion.div 
           style={{ y: y3 }} 
-          className="absolute top-40 left-1/2 -translate-x-1/2 w-96 opacity-30"
+          className="absolute top-60 left-1/2 -translate-x-1/2 w-96 opacity-30"
           transition={{ ease: "easeOut" }}
         >
           <Image 
@@ -66,26 +66,14 @@ export default function Home() {
             className="w-full h-auto drop-shadow-xl" 
           />
         </motion.div>
+        
         <motion.div 
-          style={{ y: y4, rotate: rotate1 }} 
-          className="absolute bottom-20 left-10 w-80 opacity-20"
+          style={{ y: y5, rotate: rotate2 }} 
+          className="absolute top-200 right-10 w-72 opacity-50"
           transition={{ ease: "easeOut" }}
         >
           <Image 
             src="/book4.png" 
-            alt="book4" 
-            width={320} 
-            height={500} 
-            className="w-full h-auto drop-shadow-xl" 
-          />
-        </motion.div>
-        <motion.div 
-          style={{ y: y5, rotate: rotate2 }} 
-          className="absolute bottom-10 right-10 w-72 opacity-15"
-          transition={{ ease: "easeOut" }}
-        >
-          <Image 
-            src="/book5.png" 
             alt="book5" 
             width={300} 
             height={480} 
