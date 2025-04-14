@@ -1,0 +1,233 @@
+[
+  {
+    "isbn": "9780140449136",
+    "title": "The Odyssey",
+    "author": "Homer",
+    "genre": ["Epic", "Classics", "Mythology"],
+    "description": "A thrilling adventure of Odysseus returning home after the Trojan War.",
+    "coverImage": "https://example.com/odyssey.jpg",
+    "language": "English",
+    "publisher": "Penguin Classics",
+    "rating": 4.3
+  },
+  {
+    "isbn": "9780439139595",
+    "title": "Harry Potter and the Goblet of Fire",
+    "author": "J.K. Rowling",
+    "genre": ["Fantasy", "Adventure", "Magic"],
+    "description": "Harry's fourth year at Hogwarts is filled with danger and a mysterious tournament.",
+    "coverImage": "https://example.com/hp-goblet.jpg",
+    "language": "English",
+    "publisher": "Bloomsbury",
+    "rating": 4.7
+  },
+  {
+    "isbn": "9780061120084",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "genre": ["Classics", "Historical", "Drama"],
+    "description": "A story of racial injustice and childhood innocence in the Deep South.",
+    "coverImage": "https://example.com/mockingbird.jpg",
+    "language": "English",
+    "publisher": "Harper Perennial",
+    "rating": 4.8
+  },
+  {
+    "isbn": "9780743273565",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "genre": ["Classics", "Romance", "Tragedy"],
+    "description": "A mysterious millionaire’s obsession with a former lover unfolds in the roaring 20s.",
+    "coverImage": "https://example.com/gatsby.jpg",
+    "language": "English",
+    "publisher": "Scribner",
+    "rating": 4.2
+  },
+  {
+    "isbn": "9780451524935",
+    "title": "1984",
+    "author": "George Orwell",
+    "genre": ["Dystopian", "Science Fiction", "Political Fiction"],
+    "description": "A chilling depiction of a totalitarian regime and constant surveillance.",
+    "coverImage": "https://example.com/1984.jpg",
+    "language": "English",
+    "publisher": "Signet Classics",
+    "rating": 4.6
+  },
+  {
+    "isbn": "9780316769488",
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "genre": ["Classics", "Coming-of-Age", "Psychological Fiction"],
+    "description": "Holden Caulfield’s introspective journey through New York City.",
+    "coverImage": "https://example.com/catcher.jpg",
+    "language": "English",
+    "publisher": "Little, Brown and Company",
+    "rating": 4.0
+  },
+  {
+    "isbn": "9780439554930",
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "genre": ["Fantasy", "Magic", "Adventure"],
+    "description": "The beginning of Harry Potter's magical journey at Hogwarts.",
+    "coverImage": "https://example.com/hp-sorcerer.jpg",
+    "language": "English",
+    "publisher": "Bloomsbury",
+    "rating": 4.9
+  },
+  {
+    "isbn": "9780141439600",
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "genre": ["Romance", "Classics", "Historical"],
+    "description": "The spirited Elizabeth Bennet navigates love, society, and misunderstandings.",
+    "coverImage": "https://example.com/pride.jpg",
+    "language": "English",
+    "publisher": "Penguin Classics",
+    "rating": 4.4
+  },
+  {
+    "isbn": "9780553296983",
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "genre": ["Science Fiction", "Adventure", "Politics"],
+    "description": "Paul Atreides must navigate political chaos on the desert planet Arrakis.",
+    "coverImage": "https://example.com/dune.jpg",
+    "language": "English",
+    "publisher": "Ace Books",
+    "rating": 4.5
+  },
+  {
+    "isbn": "9780385472579",
+    "title": "Zen and the Art of Motorcycle Maintenance",
+    "author": "Robert M. Pirsig",
+    "genre": ["Philosophy", "Memoir", "Travel"],
+    "description": "A philosophical exploration disguised as a motorcycle road trip.",
+    "coverImage": "https://example.com/zen.jpg",
+    "language": "English",
+    "publisher": "HarperTorch",
+    "rating": 4.1
+  },
+
+  {
+    "isbn": "9780140449266",
+    "title": "The Iliad",
+    "author": "Homer",
+    "genre": ["Epic", "Mythology", "Classics"],
+    "description": "A tale of heroes, gods, and war during the siege of Troy.",
+    "coverImage": "https://example.com/iliad.jpg",
+    "language": "English",
+    "publisher": "Penguin Classics",
+    "rating": 4.3
+  },
+  {
+    "isbn": "9780140449181",
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoevsky",
+    "genre": ["Classics", "Psychological", "Philosophy"],
+    "description": "A gripping psychological drama about guilt, redemption, and morality.",
+    "coverImage": "https://example.com/crime.jpg",
+    "language": "English",
+    "publisher": "Penguin Classics",
+    "rating": 4.6
+  },
+  {
+    "isbn": "9780679783268",
+    "title": "One Hundred Years of Solitude",
+    "author": "Gabriel García Márquez",
+    "genre": ["Magical Realism", "Classics", "Family Saga"],
+    "description": "The multi-generational story of the Buendía family in the fictional town of Macondo.",
+    "coverImage": "https://example.com/solitude.jpg",
+    "language": "English",
+    "publisher": "Vintage",
+    "rating": 4.5
+  },
+  {
+    "isbn": "9780385754729",
+    "title": "The Book Thief",
+    "author": "Markus Zusak",
+    "genre": ["Historical Fiction", "Young Adult", "War"],
+    "description": "A young girl finds solace in stealing books during Nazi Germany, narrated by Death.",
+    "coverImage": "https://example.com/bookthief.jpg",
+    "language": "English",
+    "publisher": "Knopf Books",
+    "rating": 4.8
+  },
+  {
+    "isbn": "9780060850524",
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "genre": ["Dystopian", "Science Fiction", "Classics"],
+    "description": "A futuristic society engineered for stability where individuality is lost.",
+    "coverImage": "https://example.com/bravenewworld.jpg",
+    "language": "English",
+    "publisher": "Harper Perennial",
+    "rating": 4.4
+  },
+  {
+    "isbn": "9780385486804",
+    "title": "Life of Pi",
+    "author": "Yann Martel",
+    "genre": ["Adventure", "Philosophy", "Survival"],
+    "description": "A young boy survives a shipwreck with a Bengal tiger on a lifeboat.",
+    
+    "coverImage": "https://example.com/lifeofpi.jpg",
+    "language": "English",
+    
+    "publisher": "Canongate Books",
+    "rating": 4.3
+  },
+  {
+    "isbn": "9780141182803",
+    "title": "The Stranger",
+    "author": "Albert Camus",
+    "genre": ["Philosophy", "Existentialism", "Classics"],
+    "description": "A detached man confronts absurdity after committing an unmotivated murder.",
+    
+    "coverImage": "https://example.com/stranger.jpg",
+    "language": "English",
+    
+    "publisher": "Penguin Books",
+    "rating": 4.1
+  },
+  {
+    "isbn": "9780140447934",
+    "title": "Don Quixote",
+    "author": "Miguel de Cervantes",
+    "genre": ["Classics", "Adventure", "Satire"],
+    "description": "The comedic and tragic tale of a man who becomes a knight to revive chivalry.",
+    
+    "coverImage": "https://example.com/donquixote.jpg",
+    "language": "English",
+    
+    "publisher": "Penguin Classics",
+    "rating": 4.2
+  },
+  {
+    "isbn": "9780156012195",
+    "title": "The Little Prince",
+    "author": "Antoine de Saint-Exupéry",
+    "genre": ["Children", "Philosophy", "Fantasy"],
+    "description": "A poetic tale about a young prince who travels from planet to planet.",
+    
+    "coverImage": "https://example.com/littleprince.jpg",
+    "language": "English",
+    
+    "publisher": "Harcourt",
+    "rating": 4.7
+  },
+  {
+    "isbn": "9780062315007",
+    "title": "Sapiens: A Brief History of Humankind",
+    "author": "Yuval Noah Harari",
+    "genre": ["History", "Non-Fiction", "Science"],
+    "description": "An exploration of human evolution, behavior, and the development of civilizations.",
+    
+    "coverImage": "https://example.com/sapiens.jpg",
+    "language": "English",
+  
+    "publisher": "Harper",
+    "rating": 4.6
+  }
+]
