@@ -102,7 +102,7 @@ model Review {
   id        Int      @id @default(autoincrement())
   userId    Int
   bookId    Int
-  rating    Int      // 1 to 5
+  rating    Int      
   comment   String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
