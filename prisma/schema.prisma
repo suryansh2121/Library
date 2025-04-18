@@ -1,8 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 generator client {
   provider = "prisma-client-js"
 }
@@ -22,27 +17,22 @@ model Admin {
   updatedAt DateTime @updatedAt
 }
 
-enum Role {
-  SUPERADMIN
-  LIBRARIAN
-}
-
 model User {
-  id           Int          @id @default(autoincrement())
+  id           Int           @id @default(autoincrement())
   name         String
-  email        String       @unique
+  email        String        @unique
   password     String
-  membershipId String?      @unique
+  membershipId String?       @unique
   phone        String?
   address      String?
-  fines        Float        @default(0.0)
-  reviews      Review[]
-  borrows      Borrow[]     // Renamed from IssuedBook
-  wishlist     Wishlist[]
-  reservations Reservation[]
+  fines        Float         @default(0.0)
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  borrows      Borrow[]
   finesRecords Fine[]
-  createdAt    DateTime     @default(now())
-  updatedAt    DateTime     @updatedAt
+  reservations Reservation[]
+  reviews      Review[]
+  wishlist     Wishlist[]
 }
 
 model Category {
@@ -50,16 +40,16 @@ model Category {
   name        String   @unique
   slug        String?  @unique
   description String?
-  books       Book[]
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+  books       Book[]
 }
 
 model Book {
-  id              Int          @id @default(autoincrement())
+  id              Int           @id @default(autoincrement())
   title           String
   author          String
-  isbn            String       @unique
+  isbn            String        @unique
   description     String?
   publishedYear   Int?
   publisher       String?
@@ -67,13 +57,13 @@ model Book {
   availableCopies Int
   coverImage      String?
   categoryId      Int
-  category        Category     @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  category        Category      @relation(fields: [categoryId], references: [id], onDelete: Cascade)
   borrows         Borrow[]
+  reservations    Reservation[]
   reviews         Review[]
   wishlist        Wishlist[]
-  reservations    Reservation[]
-  createdAt       DateTime     @default(now())
-  updatedAt       DateTime     @updatedAt
 }
 
 model Borrow {
@@ -85,29 +75,23 @@ model Borrow {
   returnDate  DateTime?
   fineCharged Float        @default(0.0)
   status      BorrowStatus @default(ACTIVE)
-  user        User         @relation(fields: [userId], references: [id], onDelete: Cascade)
-  book        Book         @relation(fields: [bookId], references: [id], onDelete: Cascade)
-  fines       Fine[]
   createdAt   DateTime     @default(now())
   updatedAt   DateTime     @updatedAt
-}
-
-enum BorrowStatus {
-  ACTIVE
-  RETURNED
-  OVERDUE
+  book        Book         @relation(fields: [bookId], references: [id], onDelete: Cascade)
+  user        User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  fines       Fine[]
 }
 
 model Review {
   id        Int      @id @default(autoincrement())
   userId    Int
   bookId    Int
-  rating    Int      
+  rating    Int
   comment   String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   book      Book     @relation(fields: [bookId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model Wishlist {
@@ -115,22 +99,23 @@ model Wishlist {
   userId    Int
   bookId    Int
   createdAt DateTime @default(now())
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   book      Book     @relation(fields: [bookId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
   @@unique([userId, bookId])
 }
 
 model Fine {
-  id           Int      @id @default(autoincrement())
-  userId       Int
-  borrowId     Int
-  amount       Float
-  reason       String
-  paid         Boolean  @default(false)
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
-  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  borrow       Borrow   @relation(fields: [borrowId], references: [id], onDelete: Cascade)
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  borrowId  Int
+  amount    Float
+  reason    String
+  paid      Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  borrow    Borrow   @relation(fields: [borrowId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model Reservation {
@@ -142,8 +127,19 @@ model Reservation {
   status          ReservationStatus @default(ACTIVE)
   createdAt       DateTime          @default(now())
   updatedAt       DateTime          @updatedAt
-  user            User              @relation(fields: [userId], references: [id], onDelete: Cascade)
   book            Book              @relation(fields: [bookId], references: [id], onDelete: Cascade)
+  user            User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+enum Role {
+  ADMIN
+  USER
+}
+
+enum BorrowStatus {
+  ACTIVE
+  RETURNED
+  OVERDUE
 }
 
 enum ReservationStatus {

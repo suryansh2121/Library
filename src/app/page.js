@@ -4,6 +4,9 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 
+
+import Link from 'next/link';
+
 export default function Home() {
   const containerRef = useRef(null);
   const { scrollY } = useScroll();
@@ -25,7 +28,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen w-full bg-gradient-to-b from-purple-950 to-violet-950 text-white overflow-x-hidden">
-      {/* Parallax Layers */}
+     <Link href= "/login">Login</Link>
       <div className="fixed inset-0 z-0 pointer-events-none">
         <motion.div 
           style={{ y: y1,  }} 
